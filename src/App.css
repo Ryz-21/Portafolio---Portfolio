@@ -28,6 +28,22 @@ html {
   gap: 2rem;
 }
 
+.cat-button {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* blanco sobre fondo negro */
+  transition: transform 0.3s ease;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.cat-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 .nav button {
   background-color: transparent;
   color: rgb(131, 131, 131);
@@ -113,8 +129,7 @@ html {
   background-color: #222222;
   border-top: 1px solid #000000;
   font-size: 2rem;
-
-  scroll-margin-top: 100px; 
+  scroll-margin-top:100px; 
 }
 
 /* Responsive */
@@ -139,3 +154,54 @@ html {
     gap: 1rem;
   }
 }
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Reutilizables */
+.slide-in-left {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease forwards;
+}
+
+.slide-in-up {
+  animation: slideInUp 1s ease forwards;
+}
+
+/* Retrasos opcionales */
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
