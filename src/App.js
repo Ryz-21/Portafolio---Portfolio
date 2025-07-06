@@ -33,7 +33,7 @@ function App() {
           <div className="image-section">
             <img src={myImage} alt="my custom" className="main-image" />
           </div>
-        </div>
+        </div><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
         {/* Secciones destino */}
         <section id="work" className="section">Work Section</section>
